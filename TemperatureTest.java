@@ -13,9 +13,10 @@ public class TemperatureTest {
   // {@Code Temperature} class.
 
   // @Test
-  // public void .... (){
-  //    ...
-  // }
+   public void test_Kelvin (){
+      Temperature kelvinTemperature = new Temperature (0,Temperature.units.KELVIN);
+      assertEquals(Temperature.Units.KELVIN,tInKelvin.getUnits());
+   }
 
   // @Test
   // public void .... (){
