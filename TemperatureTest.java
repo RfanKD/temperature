@@ -95,7 +95,7 @@ public class TemperatureTest {
  	  assertEquals(-459.67,fahrenheitTemperature.getValue(),0);
    }
    
-  //tests to confirm f changeUnit method is functional  
+  //tests to confirm if changeUnit method is functional  
    
  // changeUnits() test for Kelvin
    @Test
