@@ -50,6 +50,37 @@ public class TemperatureTest {
  	  assertEquals("°„F", fahrenheitTemperature.unitsToString());
    }
    
+   // getValue() test for Kelvin
    
+   @Test
+   public void getValueTestForKELVINequal0(){
+ 	  Temperature kelvinTemperature = new Temperature(0,Temperature.Units.KELVIN);
+ 	  assertEquals(0,kelvinTemperature.getValue(),0);
+   }
+   // getValue() test for Celsius
+   @Test
+   public void getValueTestForCELSIUSequal0(){
+ 	  Temperature celciusTemperature = new Temperature(0,Temperature.Units.CELSIUS);
+ 	  assertEquals(0,celciusTemperature.getValue(),0);
+   }
+ 	
+   @Test
+   public void getValueTestForCELSIUSequal0KELVIN(){
+ 	  Temperature tInCELSIUS = new Temperature(-273.15,Temperature.Units.CELSIUS);
+ 	  assertEquals(-273.15,tInCELSIUS.getValue(),0);
+   }
+   
+   // getValue() test for Fahrenheit
+   @Test
+   public void getValueTestForFAHRENHEITequal0(){
+ 	  Temperature fahrenheitTemperature = new Temperature(0,Temperature.Units.FAHRENHEIT);
+ 	  assertEquals(0,fahrenheitTemperature.getValue(),0);
+   }
+ 	
+   @Test
+   public void getValueTestForFAHRENHEITequal0KELVIN(){
+ 	  Temperature fahrenheitTemperature = new Temperature(-459.67,Temperature.Units.FAHRENHEIT);
+ 	  assertEquals(-459.67,fahrenheitTemperature.getValue(),0);
+   }
    
 }
