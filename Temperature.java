@@ -97,9 +97,9 @@ public class Temperature {
       switch (units) {
           case KELVIN:     formattedUnits = "K";
                            break;
-          case CELSIUS:    formattedUnits = "°C";
+          case CELSIUS:    formattedUnits = "C";
                            break;
-          case FAHRENHEIT: formattedUnits = "°F";
+          case FAHRENHEIT: formattedUnits = "F";
                            break;
           default:         throw new IllegalArgumentException();
       }

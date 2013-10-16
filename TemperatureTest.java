@@ -13,6 +13,7 @@ public class TemperatureTest {
   // {@Code Temperature} class.
 	
 	//getUnit test for individual temperature unit
+	// testing if acquired temperature unit is correct 
 	
    @Test
    public void getUnitTest_Kelvin (){
@@ -32,6 +33,11 @@ public class TemperatureTest {
 	  }
 	
    // unitsToString() Test fo  individual temperature unit
+   // testing if conversion to string method is correct 
+   // Kelvin must be K
+   // Celsius must be C
+   // Fahrenheit must be F
+   
    @Test
    public void unitToStringTest_Kelvin(){
  	  Temperature kelvinTemperature = new Temperature(0,Temperature.Units.KELVIN);
@@ -50,8 +56,14 @@ public class TemperatureTest {
  	  assertEquals("°„F", fahrenheitTemperature.unitsToString());
    }
    
+   // testing if getValue() method can acquire correct temperature value
+   // for celsius and fahrenheit specifically, two tests must be completed
+   // one for when celsius and fahrenheit value is equal to zero
+   // the second for when kelvin value is equal to zero
+   // since zero is the an easy value to convert and to check between the different 
+   // temperature units.
+  
    // getValue() test for Kelvin
-   
    @Test
    public void getValueTest_Kelvin(){
  	  Temperature kelvinTemperature = new Temperature(0,Temperature.Units.KELVIN);
@@ -83,6 +95,8 @@ public class TemperatureTest {
  	  assertEquals(-459.67,fahrenheitTemperature.getValue(),0);
    }
    
+  //tests to confirm f changeUnit method is functional  
+   
  // changeUnits() test for Kelvin
    @Test
    public void changeUnitsTestForKELVINToCELSIUS(){
@@ -111,11 +125,12 @@ public class TemperatureTest {
  	celciusTemperature.changeUnits(Temperature.Units.FAHRENHEIT);
  	 assertEquals(Temperature.Units.FAHRENHEIT,celciusTemperature.getUnits());
    }
+   
    //changeUnits() test for Fahrenheit
    @Test
    public void changeUnitsTestForFAHRENHEITToKELVIN(){
- 	 Temperature tInFAHRfahrenheitTemperatureENHEIT = new Temperature(0,Temperature.Units.FAHRENHEIT);
- 	 tInFAHRENHEIT.changeUnits(Temperature.Units.KELVIN);
+ 	 Temperature fahrenheitTemperature = new Temperature(0,Temperature.Units.FAHRENHEIT);
+ 	fahrenheitTemperature.changeUnits(Temperature.Units.KELVIN);
  	  assertEquals(Temperature.Units.KELVIN,fahrenheitTemperature.getUnits());
    }
 
